@@ -1,0 +1,16 @@
+in application market, framework and library help engineers make better services easily
+and this leads to higher market share of their mobile operating system
+for this reason, google and apple are trying to make better frameworks and libraries.
+
+on the other hand, web does not belong to any company
+therefore, main suppliers of web library and framework are diverse
+- angular
+- react
+- spring
+- rails
+- django
+- express
+
+framework is bigger concept compared to library
+only one framework is available in single project
+on the other hand, multiple libraries are allowed inside of single project

@@ -1,0 +1,10 @@
+back in the days, there were a lot of different operating systems.
+so languages were diverse too.
+because of that, fixing bugs was really an exhausting task.
+in this situation, java poped out.
+they designed JVM for each of the operating systems.
+thanks to this, we don't have to consider about the operating system when we code.
+
+but one problem is that it's relatively slow.
+and this makes it hard to be used on the mobile environment.
+(mobile devices have less storage and inferior performance)

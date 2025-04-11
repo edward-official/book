@@ -1,0 +1,7 @@
+why do we need many different kind of languages?
+many different people made different languages and each of them had their own pros and cons
+
+
+random things I learned
+- low leveled languages are adequate for embedded computer like home appliances
+

@@ -1,0 +1,9 @@
+when you have to work on multiple parts of a project, you can work on different parts separately by git branch
+after that we can simply merge
+and git alerts us when there's any conflict between those changes of different branches
+then we can simply fix that conflicting parts
+but completed merge doesn't necessarily mean that the merge is successful
+testing process should be done before completion
+
+when many different developers are working on the same project, we need a common workspace to update and share the entire code
+that's why we need remote repository like github, bitbucket and so on

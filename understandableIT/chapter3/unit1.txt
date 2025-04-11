@@ -1,0 +1,6 @@
+computers need network to communicate to each other.
+this means that networks connect computers. (LAN, MAN, WAN, ...)
+
+wired connection: ADSL, VDSL, Fiber Optic
+wireless connection: 3G, 4G, 5G, ...
+

@@ -1,0 +1,14 @@
+HTML
+- made by Tim Berners-Lee of CERN
+- starting point of the world wide web
+- same result on every different operating system with just the help of browser
+- not a programming language but only a document
+
+WEB vs APPLICATION
+- everytime we access the web pages, we request the pages from the server
+- that's why we don't need to update everytime to access the renewed pages for example
+- on the other hand, we have to update the application everytime a new version is revealed
+- it's easier to renew the web pages than to renew the application
+- but it doesn't mean that web page's always better
+- web pages are very sensitive to the network
+- and applications are less sensitive to the network since part of data is stored in the personal devices

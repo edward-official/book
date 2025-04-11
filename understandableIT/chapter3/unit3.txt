@@ -1,0 +1,3 @@
+client computer: front-end
+server computer: back-end
+

@@ -1,0 +1,19 @@
+even non-majored workers in software companies have to understand some IT knowledge for communication with developers
+
+for example...
+
+Planner:
+I think users should be able to change that color!
+This part is kind of urgent!
+
+Developer:
+Ah... that’s a bit complicated...
+If it’s urgent, I can temporarily store the color info in the class.
+Can I work on the server and DB later?
+Changing all the tables now will take too long.
+
+
+random things I learned
+- java was the primary language for Android development for many years
+- but kotlin is standard now (officially recommended by google)
+

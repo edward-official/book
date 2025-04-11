@@ -1,0 +1,1 @@
+nothing special: explaining why some images are suitable for client database and some are suitable for server database

@@ -1,0 +1,11 @@
+not every data is stored in the server's database
+for example, data in alarm application
+sometimes data is placed in both client and server computer
+in this case, process called "synchronization" is required
+
+we have to know where exactly the data we're looking for is located
+that's because we have to require the data to the one having the exact data we want
+API document can help us to do that
+
+local, internal database, native > client side
+API, database > server side

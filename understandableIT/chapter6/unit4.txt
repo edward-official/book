@@ -1,0 +1,8 @@
+apple made language called swift exclusively for ios development
+it is directly using the operating system for applications
+these applications are called native applications
+
+but browser started to be embedded within the operating system
+and adding a web notation to some part of application became possible
+these are called hybrid applications
+they can balance the proper amount of web advantages and application advantages

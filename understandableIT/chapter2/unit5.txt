@@ -1,0 +1,6 @@
+why don't we have to consider all the details like CPU, memory and so on?
+because operating system handles all of those.
+
+random things I learned
+- ms(windows), apple(macos, ios), google(android)
+- apple made swift language

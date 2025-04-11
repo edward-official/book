@@ -1,0 +1,4 @@
+functions of newer version of HTML, CSS, JS, ... are not available on some of the browser versions
+that's why some front-end engineers are stressed
+
+but usually they're focusing on the major version of major browser

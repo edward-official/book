@@ -1,0 +1,6 @@
+IP address changes when the location changes even if it's a same computer
+
+
+random things I learned
+- IPv4 got insufficient to accommodate all the computers since the number of computers soared.
+- that's why IPv6 came out.

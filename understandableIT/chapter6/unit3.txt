@@ -1,0 +1,4 @@
+responsive web
+- as various devices began to emerge, managing separate codes for each device gradually got more inconvenient
+- they're reacting to the width of the browsers
+- it takes longer time and costs more to manage the responsive web

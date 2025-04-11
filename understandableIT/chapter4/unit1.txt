@@ -1,0 +1,19 @@
+API enables communication between different software programs like server and client.
+one of back-end engineer's main job is API development and front-end engineers are using them
+
+CRUD: create, read, update, delete
+most of the client requests belong to these 4 categories
+
+every single request has its own address, so they had to be managed systemically in order to avoid problems
+REST API: representational state transfer
+- create: POST
+- read: GET
+- update: PUT/PATCH
+- delete: DELETE
+
+API response with status code
+- 2__: no problem
+- 4__: problem in client request
+- 5__: problem in server
+
+SDK refers to a software that helps other software programs with API.

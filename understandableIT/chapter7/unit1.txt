@@ -1,0 +1,10 @@
+just a little error in a data causes a big problem
+not even one percent of error is not permitted in data
+that's why managing data is difficult
+we call this property "integrity" of data
+
+RDB(Relational Databases)
+- it makes data processing faster and safer
+- table < schema < database
+- RDBMS freed developers from managing all those complicated files (msSQL, oracleDB, mySQL, mariaDB, ...)
+

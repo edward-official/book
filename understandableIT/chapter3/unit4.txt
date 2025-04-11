@@ -1,0 +1,9 @@
+linux kernel?
+- made by Linus Torvalds who made linux and git
+- freely distributed
+- unix style
+- lot of versions like ubuntu, red hat, android and so on
+
+random facts
+- linux is relatively cheaper because it doesn't require a graphic user interface
+

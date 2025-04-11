@@ -1,0 +1,9 @@
+server computer consumes too much electricity
+that's why electricity efficient computers are suitable for server
+if server got down, no client request can be received and therefore no respond can be made.
+
+and what if secondary memory got damaged?
+that's just terrible
+
+for these reasons, there are hosting services like AWS
+

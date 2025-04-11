@@ -1,0 +1,32 @@
+The cycle of change is extremely fast in the IT industry.
+And at the same time, both customer and company requirements change very quickly.
+Therefore, rather than aiming for a perfect plan and execution, it's wiser to focus on core features, release the product quickly, and gradually improve it over time.
+
+All workers in IT industry have to be able to communicate to each other in order to make the service better.
+All workers include Planner, Designer and even CEO and so on.
+
+
+Imagine you’re running a repair shop.
+One day, a customer brings in a bicycle and asks you to replace a sticker on it.
+It seems like a simple task just to peel off the old sticker and put on a new one.
+But once you actually start, you realize that the sticker doesn’t come off cleanly.
+At first, you didn’t know this and told the customer it would only take 10 minutes.
+In reality, the job ends up taking an hour.
+Therefore, “When will it be done?” is always a difficult question to answer.
+
+
+Developer:
+Ah, the server is supposed to send the image URL, but I think the API isn't fully implemented yet.
+It looks like only the icon URL is missing from the JSON…
+If the icon URL isn’t provided, I set it to show a default value.
+But since I made it up arbitrarily, it might look a bit odd.
+
+Planner:
+Oh, then the client side is almost done.
+I’ll talk to the backend developer.
+Also, I’ll speak with the designer and decide on a default icon.
+Once that’s changed, please go ahead and submit it for review right away.
+
+
+random things I learned
+- API connects frontend and backend

@@ -1,0 +1,8 @@
+designers usually use programs like photoshop and illustrator in their work
+but the problem is that these tools are not optimized for application and web design
+that's why there's a lot of interaction between designers and developers
+in this situation, programs like sketch, zeplin, XD came out
+
+in smartphone application/web development, the devil's in the details
+for example, it's hard for developers to implement a detail which is out of framework/library range
+that's why designers have to try to understand guide documentation of a framework or library

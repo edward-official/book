@@ -1,0 +1,2 @@
+IP addresses are converted to domain name so that we can use them easily
+understanding API documentation can help you assume how far the work has progressed

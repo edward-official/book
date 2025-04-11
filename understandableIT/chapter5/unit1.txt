@@ -1,0 +1,11 @@
+application: program that we download and use
+application versions usually have a format of number like 1.0.0
+- change on the right number means that the change is small
+- change on the middle number means that the change is relatively bigger but still compatible with the lower versions
+- change on the left number means that the change is significant, so it is no more compatible with the lower versions
+
+mobile application market: google, apple
+- apple: strict criterion of approval but they give you the clear reason of rejection when rejected
+- due to some reasons, time needed to get the approval by apple is relatively longer
+- that's why apple has smaller number of applications but has better qualities
+- google: relatively loose criterion and faster approval

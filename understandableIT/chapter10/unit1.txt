@@ -1,0 +1,6 @@
+developers who are working for the program on the operating systems of client side like windows, mac, ios, android are called client engineer.
+on the other hand developers who are working for the program on the operating system of server side like linus are called server engineer.
+and API connects those two, client and server
+
+SQL is language for CRUD on DBMS
+server engineers have to make the documentation of API they made in order to let client engineers to utilize it
