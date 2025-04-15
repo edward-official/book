@@ -1,0 +1,20 @@
+sometimes, identical code which works perfectly at my computer doesn't work on others.
+this kind of situation happens also in the working environment
+in this situation, people who don't understand the computer structure cannot find a clue to solve the problem
+a computer is just something hard to understand for those who only know the programming language
+in order to analyse the problem and suggest a solution, you have to understand what computer is
+
+even when you have to select the server computer for your service, you need this knowledge
+you have to choose the optimal choice in a limited budget
+computer structure knowledge is directly related to performance, storage and cost of computer
+
+what's the main topic of computer structure?
+1. information a computer understands: two different information (data + instruction)
+2. four important components: CPU, memory, secondary storage, I/O device
+
+secondary storage can be considered as an I/O device(outer device that is connected to a computer and exchanges information)
+but the only difference is that secondary storage assists memory
+
+components connected to main board can exchange information with each other through bus inside the main board
+the most important bus is system bus consists of address/data/control bus
+
