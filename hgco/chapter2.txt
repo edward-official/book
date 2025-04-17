@@ -1,0 +1,42 @@
+word: data size that CPU can process at once
+32bit / 64bit is usual word of modern computer
+
+two's complement
+how can we distinguish positive and negative?: flag
+
+disadvantage of using binary number is that the number is getting too long
+but computer can understand it directly
+anyway, we can use hexadecimal number to make them short
+
+when we're programming on the environment which is close to the hardware, it's quite normal to use binary/hexadecimal numbers in the code
+
+
+three important terms in expressing characters with 0/1
+- character set
+- encoding
+- decoding
+
+ASCII code is one of the first character set
+they can express 128 letters with 7bits (english alphabet, arabic numerals, some special characters and control characters)
+it's easy to encode/decode the letters, but they cannot represent many of the letters
+later, extended ASCII came out, but it was still not enough
+that's why many other non-english countries tried to make their own character set and encoding/decoding method
+
+code "65" represents 'A' is referred to "code point" of letter 'A'.
+🔎 personal question: why only 7bits?
+
+there are two ways representing korean letters.
+one is compositional method and the other is complete method
+EUC-KR is representative of complete method using 2bytes
+since one letter consists of 16bits, we can use 4-digit hexadecimal number to represent it.
+one drawback of this method is that it cannot fully cover the entire possible letters of korean
+this problem makes big and small problems time to time
+in this situation, CP949 by microsoft came out, but it was still not enough
+
+there's problem when each country has their own method.
+when we want to make a global program, we have to consider many different methods which is very tough.
+that's why UNICODE came out, which is the most popular character set in this world at this moment.
+- UNICODE [0000, 007F]: 1 byte
+- UNICODE [0080, 07FF]: 2 bytes
+- UNICODE [0800, FFFF]: 3 bytes
+- UNICODE [10000, 10FFFF]: 4 bytes
