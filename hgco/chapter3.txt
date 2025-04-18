@@ -1,0 +1,45 @@
+there are two types of low-level programming language
+one is machine code, and the other is assembly language
+machine can only understand these two
+machine code is exclusively for machine since it's too hard for human to handle this code
+that's why assembly language came out
+but this is also not enough to make complex program
+certain developers, for example embedded developers, game developers and cyber-security experts and so on, have to deal with this assembly language frequently
+
+
+high-level programming language can be converted to low-level programming language by two different ways
+one is 'to be compiled' and the other is 'to be interpreted'
+compiler checks the entire code and converts it to a low-level language which is called object code
+this means that even if there's just a single error, the entire compiling procedure fails
+on the other hand, interpreter interprets and executes the code line by line
+this makes it possible to execute the code before the error
+in general, compiled language is faster than interpreted language
+but those two categories are not that clearly apart
+there are some languages that we can certainly categorize like C/C++
+but for example, java and python are using the both ways
+
+object code is low-level language that computer can understand
+however, it doesn't mean that computer can execute it right away
+object file have to be 'linked' to be the executable file
+
+
+an instruction consists of operation code field and operand field including machine code and assembly language
+operand refers to a data or a location of a data
+most of the time they include a location, not a data
+that's why it's also called address field
+one instruction may have no operand, one or more operands
+there are many different types of operation code
+four representatives are data transfer, arithmetic/logic operations, control flow changes, input/output control
+details of operation code are different from CPU to CPU
+
+why do we use address on the operand field not a data itself?
+that's because the bit length of the instruction is limited.
+the address of operand is called 'effective address'
+
+the method used to find the location the address is pointing is called the 'addressing mode'
+top five representatives
+- immediate addressing mode
+- direct addressing mode
+- indirect addressing mode
+- register addressing mode
+- register indirect addressing mode
