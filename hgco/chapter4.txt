@@ -1,0 +1,37 @@
+CPU consists of ALU, control unit, register
+
+ALU receives operands through registers and controls from the control unit.
+then it performs the operation and outputs the result to the register for a moment not in the memory
+that's because it takes a lot of time for CPU to access the memory
+this results in a lot of delay of program
+ALU also outputs flags to the flag register when needed, for example negative value or overflow and so on
+
+control unit is a part that outputs a control signal which controls devices and interprets an instruction
+this control unit can be called as one of the most delicately manufactured device in a computer
+that's why every control unit has different inner structures
+information that control unit receives
+- clock
+- instruction
+- flag
+- control signal from outside of CPU like IO devices
+information that control unit outputs
+- control towards inside of CPU (ALU, register)
+- control towards outside of CPU (IO devices, memory)
+
+
+different CPU has different registers inside
+8 registers to remember
+- program counter
+- instruction register
+- memory address register
+- memory buffer register
+- general-purpose register
+- flag register
+- stack pointer
+- base register
+
+
+instruction cycle consists of cycles for fetching, decoding, executing, accessing memory and handling interrupts when a single instruction is processed
+an interrupt is a signal that disrupts the normal operation of the cpu
+types of interrupts include exceptions and hardware interrupts
+an interrupt service routine is a program composed of actions to handle an interrupt
