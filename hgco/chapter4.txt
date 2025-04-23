@@ -25,13 +25,12 @@ different CPU has different registers inside
 - instruction register
 - memory address register
 - memory buffer register
-- general-purpose register
 - flag register
+- general-purpose register
 - stack pointer
 - base register
 
+🔎 personal question
+- is the size of each register different?
+- what's difference between program counter and memory address register
 
-instruction cycle consists of cycles for fetching, decoding, executing, accessing memory and handling interrupts when a single instruction is processed
-an interrupt is a signal that disrupts the normal operation of the cpu
-types of interrupts include exceptions and hardware interrupts
-an interrupt service routine is a program composed of actions to handle an interrupt
