@@ -31,4 +31,6 @@ bin/
 ### Edward LEE ###
 .idea/
 *.iml
-
+src/upgrade
+phase1
+phase2
