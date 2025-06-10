@@ -11,9 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-<form action="calculationResult.jsp" method="post">
-    <input type="number" name="data1">
-    <input type="number" name="data2">
+<form action="/calculator/result" method="post">
+    <input type="number" name="number1">
+    <input type="number" name="number2">
     <button type="submit">send</button>
 </form>
 </body>
