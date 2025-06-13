@@ -13,6 +13,6 @@ public class ToDoListController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("/todo/list");
-        req.getRequestDispatcher("/WEB-INF/todo/list.jsp");
+        req.getRequestDispatcher("/WEB-INF/todo/list.jsp").forward(req,resp);
     }
 }
