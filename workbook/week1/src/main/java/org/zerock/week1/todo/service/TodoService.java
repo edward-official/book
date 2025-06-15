@@ -21,5 +21,6 @@ public enum TodoService {
 
             return dto;
         }).collect(Collectors.toList());
+        return todoDTOS;
     }
 }
