@@ -11,8 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>[number 1]: ${param.data1}</h1>
-    <h1>[number 2]: ${param.data2}</h1>
-    <h1>[sum]: ${Integer.parseInt(param.data1) + Integer.parseInt(param.data2)}</h1>
+    <h1>[number 1]: ${param.number1}</h1>
+    <h1>[number 2]: ${param.number2}</h1>
+    <h1>[sum]: ${Integer.parseInt(param.number1) + Integer.parseInt(param.number2)}</h1>
 </body>
 </html>

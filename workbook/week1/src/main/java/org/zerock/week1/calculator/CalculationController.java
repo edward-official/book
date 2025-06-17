@@ -1,5 +1,6 @@
 package org.zerock.week1.calculator;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -18,6 +19,7 @@ public class CalculationController extends HttpServlet {
         System.out.println(String.format(" number1: %s", number1));
         System.out.println(String.format(" number2: %s", number2));
 
-        resp.sendRedirect("/index.jsp");
+//        resp.sendRedirect("/index.jsp");
+        req.getRequestDispatcher("/WEB-INF/calculator/calculationResult.jsp").forward(req,resp);
     }
 }
