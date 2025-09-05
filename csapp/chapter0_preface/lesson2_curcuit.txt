@@ -1,0 +1,3 @@
+CPUs in old days were not microprocessors
+in digital circuits, transistors(semiconductor) are the only fundamental unit
+microprocessors: integrated circuits that function as CPU
