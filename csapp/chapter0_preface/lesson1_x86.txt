@@ -1,0 +1,4 @@
+intel made ISA(Instruction Set Architecture) which is called x86(not an official name) by the people in the industry
+and since the moment intel made cross license contract with ibm, amd was able to develop something based on x86 architecture
+that's the moment when x86 got bigger thanks to the amd's work to extend it to 64 bits
+and now it's considered as a standard in the industry
