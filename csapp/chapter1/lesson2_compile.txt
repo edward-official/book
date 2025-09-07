@@ -1,0 +1,46 @@
+[COMPILE SYSTEM OF C]
+
+1. Preprocessor
+   - Handles #include, #define, and conditional compilation
+   - Output: Preprocessed code (.i)
+
+2. Compiler
+   - Converts high-level language → assembly language
+   - Output: Assembly code (.s)
+
+3. Assembler
+   - Converts assembly → machine code (binary)
+   - Output: Object file (.o)
+   - Cannot be executed alone (unresolved symbols/addresses)
+
+4. Linker
+   - Combines multiple object files + libraries
+   - Resolves symbols, relocates addresses, generates executable format
+   - Output: Executable file (.exe, a.out, etc.)
+
+
+💻 Why We Create Object Files Per Source File
+
+Separate Compilation (Compilation Units)
+Compiling a large program all at once takes a lot of time.
+That’s why source files (main.c, hello.c, math.c, etc.) are compiled independently into object files (.o).
+
+When a file is modified, only that file needs to be recompiled, which makes the build process much faster.
+
+Reusability
+Some modules (like math.o) can be reused across multiple projects.
+Instead of recompiling from source every time, you can simply reuse the precompiled object file.
+
+
+💻 The Role of the Linker = “Combine and Complete”
+
+Object files reference each other’s symbols (functions, variables).
+
+- main.o calls hello(), but the definition is in hello.o.
+- printf is found in the standard library.
+
+The linker collects all these puzzle pieces and:
+
+- Resolves symbol references (who calls what).
+- Performs address relocation so the program can actually run.
+- Adds libraries and produces the final executable.
