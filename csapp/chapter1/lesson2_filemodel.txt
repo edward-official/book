@@ -20,3 +20,4 @@ In operating systems: "Everything is a file"
 [Analogy]
 - Every device is a "mailbox of data"
 - Programs simply put letters (data) in or take them out
+

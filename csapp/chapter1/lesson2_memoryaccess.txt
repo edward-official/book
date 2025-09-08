@@ -13,3 +13,4 @@
   2. DMA controller transfers data directly between disk and memory
   3. Upon completion, DMA generates an interrupt → notifies CPU
 - Reason: Inefficient for CPU to move large data directly → DMA handles transfer, CPU only manages
+

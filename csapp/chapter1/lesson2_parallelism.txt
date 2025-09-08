@@ -1,0 +1,29 @@
+Parallelism in Computer Systems
+
+1. Thread-Level Concurrency (TLP)
+- Concurrency: The concept of multiple activities happening simultaneously.
+- Past: A single CPU simulated concurrency by rapidly switching tasks (time-sharing) → uniprocessor system.
+- Multiprocessor system: Multiple CPUs (or cores) under one OS kernel → true parallel execution.
+- Multi-core processors: Multiple CPU cores on a single chip (e.g., 4-core CPU → 4 independent executions).
+- Hyperthreading (SMT): One core executes multiple threads simultaneously (e.g., Intel Core i7 → 4 cores × 2 threads = 8 threads).
+- Benefits:
+  - Handle multiple tasks concurrently → better user experience.
+  - Speed up multi-threaded applications.
+
+2. Instruction-Level Parallelism (ILP)
+- CPUs can execute multiple instructions at once.
+- Early CPUs (Intel 8086): 1 instruction took 3–10 cycles.
+- Modern CPUs: Use pipelining → overlap instruction steps → 2–4 instructions per cycle.
+- Superscalar processors: More than 1 instruction per clock cycle.
+- Well-optimized code can exploit ILP → better performance.
+
+3. SIMD Parallelism (Single-Instruction, Multiple-Data)
+- One instruction performs operations on multiple data simultaneously.
+- Example: Intel/AMD CPUs can add 8 pairs of float values at once.
+- Mainly used in image, sound, and video processing.
+- Some compilers auto-vectorize, but vector data types are more reliable.
+
+Summary
+1. Thread-Level Parallelism (TLP): Multiple programs/threads execute simultaneously (multi-core, hyperthreading).
+2. Instruction-Level Parallelism (ILP): CPU executes multiple instructions in parallel (pipelining, superscalar).
+3. Data-Level Parallelism (SIMD): One instruction operates on multiple data at once (multimedia optimization).
