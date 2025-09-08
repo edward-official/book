@@ -19,3 +19,10 @@ In virtual memory, the regions occupied by the kernel, text segment, and data se
 - Speed: Slower, since it requires memory manager operations. 
 - Advantage: Much larger than the stack and can grow or shrink dynamically. 
 - Disadvantage: If not freed properly, it can cause memory leaks; incorrect deallocation may cause invalid references (segmentation faults). 
+
+
+Memory mapping
+- a technique that allows handling large files efficiently.
+- linking a disk file to a virtual memory address
+- loading only the required parts into main memory when accessed
+
