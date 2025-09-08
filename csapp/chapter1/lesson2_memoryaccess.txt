@@ -1,0 +1,15 @@
+[Keyboard Input]
+- Data Characteristics: Very small (character-level), irregular, requires immediate response (interrupt)
+- Processing Method:
+  1. Keyboard controller generates an interrupt → sends signal to CPU
+  2. CPU receives the interrupt and executes the OS interrupt handler
+  3. Determines which key was pressed and delivers it to the program
+- Reason: Immediate processing and interpretation required → CPU involvement is essential
+
+[Disk I/O]
+- Data Characteristics: Large (KB~MB), bulk, repetitive
+- Processing Method:
+  1. CPU gives command to the DMA controller → "Transfer from this address to that address"
+  2. DMA controller transfers data directly between disk and memory
+  3. Upon completion, DMA generates an interrupt → notifies CPU
+- Reason: Inefficient for CPU to move large data directly → DMA handles transfer, CPU only manages
