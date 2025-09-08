@@ -1,0 +1,22 @@
+In operating systems: "Everything is a file"
+
+[Core Idea]
+- Devices such as keyboards, displays, and networks are all treated as files.
+- All input/output is unified in the form of file reading/writing (`read`, `write`).
+
+[Examples]
+- Keyboard input   → read() from /dev/keyboard file
+- Monitor output   → write() to /dev/tty file
+- Network socket   → read()/write() just like a regular file
+
+[Advantages]
+1. Consistency: All devices are handled in the same way
+2. Simplicity: Programmers don’t need to know complex device-specific operations
+3. Flexibility: Redirection (>) allows easily changing the output target
+   e.g. echo "hi" > file.txt    (save to file)
+        echo "hi" > /dev/tty    (output to screen)
+        echo "hi" > /dev/lp0    (output to printer)
+
+[Analogy]
+- Every device is a "mailbox of data"
+- Programs simply put letters (data) in or take them out
