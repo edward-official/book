@@ -2,3 +2,19 @@ Virtual memory is allocated per process and serves as an abstracted space that u
 Therefore, threads within the same process share the same virtual memory.  
 Additionally, while the maximum size of each virtual memory is fixed, its actual size is dynamic.  
 In virtual memory, the regions occupied by the kernel, text segment, and data segment are fixed, while the remaining space is dynamically shared by the stack, heap, and memory-mapped areas.
+
+
+1.Stack
+- Purpose: Stores local variables, parameters, and return addresses during function calls. 
+- Structure: Operates on a Last In First Out (LIFO) basis — the last item in is the first one out. 
+- Allocation/Deallocation: Memory is allocated automatically when a function is called and freed when the function ends. 
+- Speed: Fast, because the CPU manages it directly through the stack pointer. 
+- Limitation: Relatively small size.Deep recursion or large local variables can cause stack overflow. 
+
+2.Heap
+- Purpose: Stores objects dynamically created during program execution (e.g., using `new` or `malloc`). 
+- Structure: Managed by the memory manager; no strict data structure constraints. 
+- Allocation/Deallocation: Must be explicitly managed by the programmer (or garbage collector). 
+- Speed: Slower, since it requires memory manager operations. 
+- Advantage: Much larger than the stack and can grow or shrink dynamically. 
+- Disadvantage: If not freed properly, it can cause memory leaks; incorrect deallocation may cause invalid references (segmentation faults). 
