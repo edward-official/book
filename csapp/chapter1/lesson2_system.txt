@@ -1,0 +1,4 @@
+Virtual memory is allocated per process and serves as an abstracted space that utilizes both main memory and disk.  
+Therefore, threads within the same process share the same virtual memory.  
+Additionally, while the maximum size of each virtual memory is fixed, its actual size is dynamic.  
+In virtual memory, the regions occupied by the kernel, text segment, and data segment are fixed, while the remaining space is dynamically shared by the stack, heap, and memory-mapped areas.
