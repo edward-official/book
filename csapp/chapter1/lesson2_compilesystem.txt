@@ -1,4 +1,4 @@
-[COMPILE SYSTEM OF C]
+💻 COMPILE SYSTEM OF C
 
 1. Preprocessor
    - Handles #include, #define, and conditional compilation
