@@ -1,0 +1,17 @@
+Little Endian (32-bit integer): 0x12345678
+
+1. General notation
+   - 0x12 (most significant byte, MSB)
+   - 0x78 (least significant byte, LSB)
+
+2. Big Endian
+   - Low address → high address
+   - Storage order: 12 34 56 78
+
+3. Little Endian
+   - Low address → high address
+   - Storage order: 78 56 34 12
+
+4. Characteristics
+   - Big Endian: matches the order humans read (from the largest byte first)
+   - Little Endian: stored in reverse (starting from the smallest byte first)
