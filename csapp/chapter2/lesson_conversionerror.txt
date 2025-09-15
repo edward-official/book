@@ -1,0 +1,21 @@
+/* WARNING: This is buggy code */
+float sum_elements(float a[], unsigned length) {
+    int i;
+    float result = 0;
+
+    for (i = 0; i <= length-1; i++)
+        result += a[i];
+    return result;
+}
+
+
+/* Prototype for library function strlen */
+size_t strlen(const char *s);
+
+Here is your first attempt at the function:
+
+/* Determine whether string s is longer than string t */
+/* WARNING: This function is buggy */
+int strlonger(char *s, char *t) {
+    return strlen(s) - strlen(t) > 0;
+}
