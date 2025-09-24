@@ -1,0 +1,23 @@
+void uremdiv(unsigned long dividend, unsigned long divisor, unsigned long *quotient_pointer, unsigned long *remainder_pointer) {
+  unsigned long quotient = dividend / divisor;
+  unsigned long remainder = dividend % divisor;
+  *quotient_pointer = quotient;
+  *remainder_pointer = remainder;
+}
+
+rdi: dividend
+rsi: divisor
+rdx: quotient_pointer
+rcx: remainder_pointer
+
+rax: register for quotient
+rdx: register for remainder
+
+uremfiv:
+  movq  %rdx, %r8
+  movq  %rdi, %rax
+  movl  $0, %edx
+  divq  %rsi
+  movq  %rax, (%r8)
+  movq  %rdx, (%rcx)
+  ret
