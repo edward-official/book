@@ -1,0 +1,22 @@
+int comp(data_t a, data_t b) { return a COMP b; }
+
+--------------------
+A.
+cmpl   %esi, %edx
+setl   %al
+--------------------
+B.
+cmpl   %esi, %edi
+setge  %al
+--------------------
+C.
+cmpb   %sil, %dil
+setbe  %al
+--------------------
+D.
+cmpq   %rsi, %rdi
+setne  %al
+--------------------
+
+
+
