@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 401.5,
-    "collapsed": true
+    "width": 401.5
   },
   "right": {
     "id": "6745f7ed0306601a",
@@ -173,12 +172,12 @@
   },
   "active": "fccb54dfb0cbbf1b",
   "lastOpenFiles": [
-    "Screenshot 2025-10-25 at 11.34.37.png",
-    "Screenshot 2025-10-25 at 10.46.10.png",
+    "Figure09-38.png",
+    "Figure09-37.png",
+    "Chapter09Unit09-DynamicMemoryAllocation.md",
     "Figure09-36.png",
     "Figure09-35.png",
     "Figure09-34.png",
-    "Chapter09Unit09-DynamicMemoryAllocation.md",
     "Figure09-33.png",
     "Chapter09Unit06-AddressTranslation.md",
     "Chapter09Unit07-CaseStudyTheIntelCorei7LinuxMemorySystem.md",
@@ -187,7 +186,6 @@
     "Figure09-20b.png",
     "Figure09-19.png",
     "Screenshot 2025-10-24 at 16.02.34.png",
-    "Figure09-20a.png",
     "Chapter09Unit05-VMToolForMemoryProtection.md",
     "Chapter09Unit00-VirtualMemory.md",
     "Chapter09Unit01-PhysicalAndVirtualAddressing.md",
