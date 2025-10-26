@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Chapter09Unit09-DynamicMemoryAllocation.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 401.5
+    "width": 401.5,
+    "collapsed": true
   },
   "right": {
     "id": "6745f7ed0306601a",
@@ -172,6 +173,7 @@
   },
   "active": "fccb54dfb0cbbf1b",
   "lastOpenFiles": [
+    "Screenshot 2025-10-25 at 16.21.40.png",
     "Figure09-38.png",
     "Figure09-37.png",
     "Chapter09Unit09-DynamicMemoryAllocation.md",
