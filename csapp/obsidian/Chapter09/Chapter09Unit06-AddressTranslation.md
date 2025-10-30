@@ -56,7 +56,7 @@ single-level page table의 크기는 가상 메모리 공간의 최대 용량과
 TLB를 관리하기 위해서 MMU는 VPN의 2개 비트를 이용해서 TLB 세트 인덱스를 정하고 나머지 6개의 비트를 이용해서 TLB 세트 내부의 태그 번호를 정합니다. ==(direct-mapped 방식과 반대되는 개념)==
 
 ###### Figure 9.20 (b)
-![[Figure09-20B.png]]
+![[Figure09-20b.png]]
 위 Figure 9.20(b)는 싱글 페이지 테이블의 일부분을 보여주고 있습니다.
 
 ###### Figure 9.20 (c)

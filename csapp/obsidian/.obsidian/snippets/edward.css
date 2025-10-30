@@ -1,0 +1,6 @@
+mark,
+.cm-highlight,
+.markdown-preview-view mark {
+  background-color: #ccff90 !important;
+  color: black !important;
+}
