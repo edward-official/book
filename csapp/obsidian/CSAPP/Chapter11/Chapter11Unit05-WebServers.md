@@ -43,7 +43,7 @@ HTML의 진짜 강점은 다른 콘텐츠로의 연결(hyperlink) 을 포함할 
 
 
 #### 11.5.2 Web Content
-![[Chapter11/Figure11-23.png]]
+![[Figure11-23.png]]
 웹 콘텐츠(content)는 바이트(byte)의 연속된 흐름이며, 각 콘텐츠에는 ==MIME 타입==이 지정됩니다.
 웹 서버는 두 가지 방식으로 콘텐츠를 제공합니다:
 
