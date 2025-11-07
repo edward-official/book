@@ -119,10 +119,10 @@ int pthread_create(pthread_t *tid, pthread_attr_t *attr, func *f, void *arg);
 
 스레드는 다음 방식 중 하나로 종료된다:
 
-1. 암묵적 종료 (implicit) — 스레드 루틴이 `return`할 때
-2. 명시적 종료 (explicit) — `pthread_exit(void *retval)` 호출 시
+1. ==암묵적 종료 (implicit)== — 스레드 루틴이 `return`할 때
+2. ==명시적 종료 (explicit)== — `pthread_exit(void *retval)` 호출 시
 3. 프로세스 전체 종료 — 한 스레드가 `exit()` 호출 시
-4. 다른 스레드에 의해 취소됨 — `pthread_cancel(tid)` 호출 시
+4. ==다른 스레드에 의해 취소됨== — `pthread_cancel(tid)` 호출 시
 
 
 ## 12.3.5 스레드 회수 (Reaping Terminated Threads)
@@ -130,7 +130,7 @@ int pthread_create(pthread_t *tid, pthread_attr_t *attr, func *f, void *arg);
 스레드가 종료되면, 다른 스레드는 `pthread_join`으로 그 종료를 기다릴 수 있다.
 
 ```c
-int pthread_join(pthread_t tid, void thread_return);
+int pthread_join(pthread_t tid, void **thread_return);
 ```
 
 이 함수는 지정한 스레드가 끝날 때까지 블록되며, 그 스레드의 반환값을 `thread_return` 위치에 저장한다.
@@ -139,7 +139,7 @@ int pthread_join(pthread_t tid, void thread_return);
 
 ## 12.3.6 스레드 분리 (Detaching Threads)
 
-스레드는 조인 가능(joinable) 상태 또는 분리(detached) 상태 중 하나이다.
+스레드는 ==조인 가능(joinable) 상태 또는 분리(detached) 상태== 중 하나이다.
 
 * 조인 가능 스레드는 다른 스레드가 `pthread_join`으로 회수해야 한다.
 * 분리된 스레드는 종료 시 자동으로 메모리 자원이 해제된다.
@@ -148,7 +148,7 @@ int pthread_join(pthread_t tid, void thread_return);
 int pthread_detach(pthread_t tid);
 ```
 
-일반적으로 서버에서는 각 요청마다 새 스레드를 생성하므로, 일일이 join할 필요가 없도록
+==일반적으로 서버==에서는 각 요청마다 새 스레드를 생성하므로, 일일이 join할 필요가 없도록
 스레드 자신이 `pthread_detach(pthread_self())`를 호출해 자동 해제되게 만든다.
 
 
@@ -213,10 +213,10 @@ void *thread(void *vargp)
 ### 주요 포인트
 
 1. 경쟁 조건(race condition) 방지
-   `connfd` 변수를 스택이 아닌 동적 메모리(Malloc) 로 할당해야 한다.
+   `connfd` 변수를 스택이 아닌 ==동적 메모리(Malloc) 로 할당==해야 한다.
    그렇지 않으면 `accept` 호출과 스레드 실행 사이의 타이밍 문제로 잘못된 소켓 번호를 참조할 수 있다.
 
 2. 메모리 누수 방지
-   각 스레드는 자신을 `detach` 해야 하며(`pthread_detach(pthread_self())`),
+   ==각 스레드는 자신을 `detach` 해야 하며==(`pthread_detach(pthread_self())`),
    메인 스레드가 할당한 메모리를 스스로 `Free` 해야 한다.
 
