@@ -11,10 +11,14 @@
             "id": "c6e441d95a44607d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "week09/Priority Scheduling.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Priority Scheduling"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5086555480957
+    "width": 343.5024719238281
   },
   "right": {
     "id": "6745f7ed0306601a",
@@ -138,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CSAPP/Chapter12/Chapter12Unit06-UsingThreadsForParallelism.md",
+                "file": "week09/Priority Scheduling.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Chapter12Unit06-UsingThreadsForParallelism"
+              "title": "Outline of Priority Scheduling"
             }
           }
         ],
@@ -165,28 +169,38 @@
       "bases:Create new base": false
     }
   },
-  "active": "4af55d9679b54472",
+  "active": "c6e441d95a44607d",
   "lastOpenFiles": [
     "CSAPP/Chapter12/Chapter12Unit05-SynchronizingThreadsWithSemaphores.md",
-    "CSAPP/Chapter12/Chapter12Unit07-OtherConcurrencyIssues.md",
     "CSAPP/Chapter12/Chapter12Unit06-UsingThreadsForParallelism.md",
-    "Screenshot 2025-11-07 at 17.51.22.png",
-    "Screenshot 2025-11-07 at 17.11.53.png",
-    "Screenshot 2025-11-07 at 17.04.00.png",
-    "Screenshot 2025-11-07 at 15.46.44.png",
-    "Screenshot 2025-11-07 at 15.46.21.png",
-    "Screenshot 2025-11-07 at 15.45.56.png",
-    "Screenshot 2025-11-07 at 15.44.25.png",
-    "Screenshot 2025-11-07 at 15.37.29.png",
-    "Screenshot 2025-11-07 at 14.00.52.png",
-    "Screenshot 2025-11-07 at 13.23.36.png",
+    "CSAPP/Chapter12/Chapter12Unit07-OtherConcurrencyIssues.md",
+    "week09/Priority Scheduling.md",
+    "CSAPP/Chapter12/Untitled 1.md",
+    "CSAPP/Chapter12/Untitled.md",
+    "thread",
+    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 17.51.22.png",
+    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 17.11.53.png",
+    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 17.04.00.png",
+    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.46.44.png",
+    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.46.21.png",
+    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.45.56.png",
+    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.44.25.png",
+    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.37.29.png",
+    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 14.00.52.png",
+    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 13.23.36.png",
+    "CSAPP/Chapter12/images",
+    "CSAPP/Chapter12/New Folder With Items",
+    "CSAPP/Chapter11/images",
+    "CSAPP/Chapter11/New Folder With Items",
+    "CSAPP/Chapter09/images",
+    "CSAPP/Chapter09/untitled folder",
     "CSAPP/Chapter12/Chapter12Unit04-SharedVariablesInThreadedPrograms.md",
     "CSAPP/Chapter12/Chapter12Unit03-ConcurrentProgrammingWithThreads.md",
     "CSAPP/Chapter12/Chapter12Unit02-ConcurrentProgrammingWithIOMultiplexing.md",
     "CSAPP/Chapter12/Chapter12Unit01-ConcurrentProgrammingWithProcesses.md",
     "CSAPP/Chapter12/Chapter12Unit00-ConcurrentProgramming.md",
     "CSAPP/Chapter12",
-    "Untitled",
+    "week09",
     "CSAPP",
     "CSAPP/Chapter10/Chapter10Unit05-RobustReadingAndWritingWithTheRioPackage.md",
     "CSAPP/Chapter11/Chapter11Unit06-PuttingItTogetherTheTinyWebServer.md",
@@ -203,15 +217,6 @@
     "CSAPP/Chapter10/Chapter10Unit09-IORedirection.md",
     "CSAPP/Chapter10/Chapter10Unit10-StandardIO.md",
     "CSAPP/Chapter10/Chapter10Unit11-PuttingItTogetherWhichIOFunctionsShouldIUse.md",
-    "CSAPP/Chapter10",
-    "CSAPP/Chapter11/Chapter11Unit01-TheClientServerProgrammingModel.md",
-    "CSAPP/Chapter11/Chapter11Unit03-TheGlobalIPInternet.md",
-    "Untitled.base",
-    "Untitled 2.base",
-    "Untitled 1.base",
-    "Untitled.canvas",
-    "CSAPP/Chapter11",
-    "CSAPP/Chapter09",
-    "CSAPP/Chapter08"
+    "Untitled.canvas"
   ]
 }
