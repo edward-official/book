@@ -6,29 +6,38 @@
 - ==현재 스레드의 자녀 리스트에 만들어진 대기 구조체를 추가한다.==
 
 #### 부모가 자식 리스트에서 특정 자식을 삭제하는 시점
-- 부모가 process_wait 함수 호출 (remove_child_wait_status)
+- 커널 부모가 process_wait 함수 호출 (remove_child_wait_status)
+- 포크 부모가 포크 성공시 process_exit에서 (release_child_waits)
+- 포크 부모가 포크 실패시 (remove_child_wait_status)
 
-#### 포크에서 ref_cnt가 줄어드는 시점
-- 자식이 process_exit에서 wait_status_release 함수 호출
+#### 커널 부모가 유저 프로그램 실행 시 struct wait_status 해제 과정
+- 부모가 process_wait 함수 호출 (wait_status_release)
+- 자식이 process_exit 함수 호출 (wait_status_release)
+
+#### 포크가 성공하는 경우에 struct wait_status 해제 과정
+- 자식이 process_exit 함수 호출 (wait_status_release)
+- 부모가 process_exit 함수 호출 (wait_status_release)
+
+#### 포크가 실패하는 경우에 struct wait_status 해제 과정
 - 부모가 process_fork에서 wait_status_release 함수 호출
-- 부모가 먼저 종료되어도 process_exit 함수에서 release_child_waits 함수를 호출한다. (wait_status_release)
+- 부모가 process_exit에서 wait_status_release 함수 호출
+
 
 카운트 값이 0이되면 구조체는 즉시 해제된다.
 
 
-#### 부모 입장에서 대기 구조체의 역할:
+#### 부모 입장에서 대기 구조체의 역할
 - 부모는 자식의 아이디를 알 수 있다.
 - 종료 코드와 종료 여부를 알 수 있다.
-- 참조 수를 이용해 메모리 해제 시점도 조절한다.
+- 참조 수를 이용해 메모리 해제 시점도 조절한다. (부모/자식 공통).
 - 동기화 (부모/자식 공통).
 
-#### 자녀 입장에서 대기 구조체의 역할:
-- 
+#### 자식 입장에서 대기 구조체의 역할
+- 부모를 깨울 수 있다.
+- 참조 수를 이용해 메모리 해제 시점도 조절한다. (부모/자식 공통).
+- 동기화 (부모/자식 공통).
 
-#### 대기 구조체의 위치:
-- 부모는 자녀 리스트에 갖고 있고, 자녀는 인자로 넘겨 받았다.
-
-#### 대기 구조체의 멤버:
+#### 대기 구조체의 멤버
 - 부모의 자녀 리스트에 들어가기 위해서 리스트 원소
 - 부모를 깨울 수 있도록 하는 세마포어
 - 이 구조체 멤버에 동시 접근할 수 없도록 하기 위한 락
