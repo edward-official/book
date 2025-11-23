@@ -4,24 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "97bb0fa330b4c970",
+        "id": "5c3e0fa86b1a8f9a",
         "type": "tabs",
         "children": [
           {
-            "id": "bb5fef2ab96f1e23",
+            "id": "7c05c9322b67839e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pintos/Project02-UserProgram/MultiLevelPageModel.md",
+                "file": "pintos/Project02-UserProgram/other/MultiLevelPageModel.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "MultiLevelPageModel"
             }
+          },
+          {
+            "id": "951e7aba0fca05f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pintos/Project02-UserProgram/other/Questions.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Questions"
+            }
+          },
+          {
+            "id": "161677426e3fc8f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pintos/Project02-UserProgram/other/SystemCallForkLogic.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SystemCallForkLogic"
+            }
+          },
+          {
+            "id": "22577969486f3a9c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pintos/Project02-UserProgram/other/TroubleShootingExecuteMissing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TroubleShootingExecuteMissing"
+            }
+          },
+          {
+            "id": "7c5e6957f7826e5b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "edward/LittleThings.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LittleThings"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -142,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pintos/Project02-UserProgram/MultiLevelPageModel.md",
+                "file": "edward/LittleThings.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of MultiLevelPageModel"
+              "title": "Outline of LittleThings"
             }
           }
         ],
@@ -169,11 +226,30 @@
       "bases:Create new base": false
     }
   },
-  "active": "bb5fef2ab96f1e23",
+  "active": "7c5e6957f7826e5b",
   "lastOpenFiles": [
+    "edward/images",
+    "pintos/Project02-UserProgram/other/TroubleShootingExecuteMissing.md",
+    "edward/LittleThings.md",
+    "edward",
+    "pintos/Project02-UserProgram/other/SystemCallForkLogic.md",
+    "pintos/Project02-UserProgram/other/Questions.md",
+    "pintos/Project03-VirtualMemory/Introduction.md",
+    "pintos/Project03-VirtualMemory",
+    "pintos/Project02-UserProgram/other/MultiLevelPageModel.md",
+    "pintos/Project02-UserProgram/other/Parallelism.md",
+    "pintos/Project02-UserProgram/images",
+    "pintos/Project02-UserProgram/other",
+    "pintos/Project02-UserProgram/images/comparison.png",
+    "pintos/Project02-UserProgram/code/process_create_initd.md",
+    "pintos/Project02-UserProgram/code/process_exit.md",
+    "pintos/Project02-UserProgram/code/process_wait.md",
+    "pintos/Project02-UserProgram/code/process_exec.md",
+    "pintos/Project02-UserProgram/code/load.md",
+    "pintos/Project02-UserProgram/code/wait_system_init.md",
+    "pintos/Project02-UserProgram/code",
     "pintos/Project02-UserProgram",
     "pintos/Project01-Thread/PriorityScheduling.md",
-    "pintos/Project02-UserProgram/MultiLevelPageModel.md",
     "pintos/Project01-Thread",
     "CSAPP/Chapter08/Chapter08Unit05-Signals.md",
     "CSAPP/Chapter12/Chapter12Unit07-OtherConcurrencyIssues.md",
@@ -191,32 +267,13 @@
     "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.44.25.png",
     "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.37.29.png",
     "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 14.00.52.png",
-    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 13.23.36.png",
     "CSAPP/Chapter12/images",
     "CSAPP/Chapter12/New Folder With Items",
-    "CSAPP/Chapter11/images",
-    "CSAPP/Chapter11/New Folder With Items",
-    "CSAPP/Chapter09/images",
-    "CSAPP/Chapter09/untitled folder",
     "CSAPP/Chapter12/Chapter12Unit04-SharedVariablesInThreadedPrograms.md",
     "CSAPP/Chapter12/Chapter12Unit03-ConcurrentProgrammingWithThreads.md",
     "CSAPP/Chapter12/Chapter12Unit02-ConcurrentProgrammingWithIOMultiplexing.md",
     "CSAPP/Chapter12/Chapter12Unit01-ConcurrentProgrammingWithProcesses.md",
     "CSAPP/Chapter12/Chapter12Unit00-ConcurrentProgramming.md",
-    "CSAPP/Chapter12",
-    "pintos",
-    "CSAPP/Chapter10/Chapter10Unit05-RobustReadingAndWritingWithTheRioPackage.md",
-    "CSAPP/Chapter11/Chapter11Unit06-PuttingItTogetherTheTinyWebServer.md",
-    "CSAPP/Chapter11/Chapter11Unit05-WebServers.md",
-    "CSAPP/Chapter11/Chapter11Unit04-TheSocketsInterface.md",
-    "CSAPP/Chapter10/Chapter10Unit08-SharingFiles.md",
-    "CSAPP/Chapter10/Chapter10Unit07-ReadingDirectoryContents.md",
-    "CSAPP/Chapter10/Chapter10Unit06-ReadingFileMetadata.md",
-    "CSAPP/Chapter10/Chapter10Unit04-ReadingAndWritingFiles.md",
-    "CSAPP/Chapter10/Chapter10Unit03-OpeningAndClosingFiles.md",
-    "CSAPP/Chapter10/Chapter10Unit02-Files.md",
-    "CSAPP/Chapter10/Chapter10Unit01-UnixIO.md",
-    "CSAPP/Chapter10/Chapter10Unit00-SystemLevelIO.md",
     "Untitled.canvas"
   ]
 }
