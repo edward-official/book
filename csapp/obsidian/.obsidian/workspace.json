@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pintos/Project02-UserProgram/other/ExtendFileDescriptor.md",
+                "file": "pintos/Project03-VirtualMemory/Phase02-AnonymousPage.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ExtendFileDescriptor"
+              "title": "Phase02-AnonymousPage"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pintos/Project02-UserProgram/other/ExtendFileDescriptor.md",
+                "file": "pintos/Project03-VirtualMemory/Phase02-AnonymousPage.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ExtendFileDescriptor"
+              "title": "Outline of Phase02-AnonymousPage"
             }
           }
         ],
@@ -156,7 +156,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 377.5
+    "width": 377.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,8 +172,24 @@
   },
   "active": "7c5e6957f7826e5b",
   "lastOpenFiles": [
-    "edward/LittleThings.md",
+    "tmp.png",
+    "Screenshot 2025-12-03 at 11.45.15.png",
+    "pintos/Project03-VirtualMemory/images/vm_anon_init.png",
+    "pintos/Project03-VirtualMemory/Phase02-AnonymousPage.md",
+    "pintos/Project03-VirtualMemory/images/Bogus.png",
+    "pintos/Project03-VirtualMemory/images/UninitializedPage.png",
+    "pintos/Project03-VirtualMemory/images/LoadSegment.png",
+    "pintos/Project03-VirtualMemory/images/Page.png",
+    "pintos/Project03-VirtualMemory/Phase01-MemoryManagement.md",
+    "pintos/Project03-VirtualMemory/images/InsertPage.png",
+    "pintos/Project03-VirtualMemory/images/FindElement.png",
+    "pintos/Project03-VirtualMemory/images/OutdatedFind.png",
+    "pintos/Project03-VirtualMemory/images/HashFind.png",
+    "pintos/Project03-VirtualMemory/Phase00-VirtualMemory.md",
+    "pintos/Project03-VirtualMemory/images",
     "pintos/Project02-UserProgram/other/ExtendFileDescriptor.md",
+    "pintos/Project03-VirtualMemory",
+    "edward/LittleThings.md",
     "edward/images",
     "pintos/Project02-UserProgram/other/TroubleShootingExecuteMissing.md",
     "edward",
@@ -184,7 +201,6 @@
     "pintos/Project02-UserProgram/other/Parallelism.md",
     "pintos/Project02-UserProgram/images",
     "pintos/Project02-UserProgram/other",
-    "pintos/Project02-UserProgram/images/comparison.png",
     "pintos/Project02-UserProgram/code/process_create_initd.md",
     "pintos/Project02-UserProgram/code/process_exit.md",
     "pintos/Project02-UserProgram/code/process_wait.md",
@@ -201,22 +217,7 @@
     "CSAPP/Chapter12/Chapter12Unit05-SynchronizingThreadsWithSemaphores.md",
     "CSAPP/Chapter12/Untitled 1.md",
     "CSAPP/Chapter12/Untitled.md",
-    "thread",
-    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 17.51.22.png",
-    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 17.11.53.png",
-    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 17.04.00.png",
-    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.46.44.png",
-    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.46.21.png",
-    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.45.56.png",
-    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.44.25.png",
-    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 15.37.29.png",
-    "CSAPP/Chapter12/images/Screenshot 2025-11-07 at 14.00.52.png",
-    "CSAPP/Chapter12/images",
     "CSAPP/Chapter12/Chapter12Unit04-SharedVariablesInThreadedPrograms.md",
-    "CSAPP/Chapter12/Chapter12Unit03-ConcurrentProgrammingWithThreads.md",
-    "CSAPP/Chapter12/Chapter12Unit02-ConcurrentProgrammingWithIOMultiplexing.md",
-    "CSAPP/Chapter12/Chapter12Unit01-ConcurrentProgrammingWithProcesses.md",
-    "CSAPP/Chapter12/Chapter12Unit00-ConcurrentProgramming.md",
     "Untitled.canvas"
   ]
 }
