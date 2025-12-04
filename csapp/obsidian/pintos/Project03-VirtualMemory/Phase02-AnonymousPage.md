@@ -139,3 +139,60 @@ user program tries to access a page which it believes to possess a frame:
 이 함수는 `load_segment` 함수에서 `vm_alloc_page_with_initializer`를 호출할 때 넘겨주었던 함수로, 페이지 폴트가 발생했을 때 호출된다.
 `struct page *page`, `void *aux`를 인자로 받아서 페이지에 프레임을 할당하고 그 프레임에 데이터를 읽어오는 역할을 하는 것 같다.
 
+#### `setup_stack`
+기존 방식의 스택은 확장이 불가능한 방식이었지만 이제는 확장이 가능한 방식으로 스택 로직을 수정해줘야 하고, 이 `setup_stack` 함수가 담당하는 것은 초기에 필요한 스택 페이지 하나를 생성하는 것이다.
+그리고 나중에 확장이 필요할 때는 이 다음에 나올 `vm_try_handle_fault` 함수가 스택 확장을 책임지는 것 같다.
+
+```
+static bool
+setup_stack (struct intr_frame *if_) {
+	bool success = false;
+	void *stack_bottom = (void *) (((uint8_t *) USER_STACK) - PGSIZE);
+	vm_alloc_page_with_initializer(VM_ANON | VM_MARKER_0, stack_bottom, true, NULL, NULL);
+	success = vm_claim_page(stack_bottom);
+	if (success) if_->rsp = USER_STACK;
+	return success;
+}
+```
+
+여기서 질문:
+- Q: `vm_alloc_page_with_initializer`에서 왜 무조건 `true`를 전달하지?? 스택이면 무조건 쓰기 가능인건가??
+  A: 아 내가 생각을 잘못했다. `const` 변수같은 경우에도 일단 무조건 쓰기는 해야하니까 스택은 무조건 쓰기 가능으로 만들어야겠네. 다만 수정을 불가능하게 하는 방법은 또 따로 있겠지 (아마)
+- Q: 질문은 아니지만 `vm_alloc_page_with_initializer`에서 마지막 두개의 인자로 NULL을 전달한 건 스택은 바이너리 파일 로드와 관련이 없기 때문인거라고 예상을 했다.
+  A: 코덱스 선생님에게 물어본 결과 당연히 그게 맞는 생각이었다.
+
+#### `vm_try_handle_fault`
+이 함수는 페이지 폴트가 발생했을 때 먼저 그 페이지 폴트가 정상적인지 판단하고, `spt`에서 해당 페이지를 찾아서 데이터를 적재해주거나 스택 확장을 수행하는 함수이다.
+
+```
+bool
+vm_try_handle_fault (struct intr_frame *f, void *addr, bool user, bool write, bool not_present) {
+  if (!not_present) return false;
+  if (!is_user_vaddr(addr) || pg_round_down(addr) < PGSIZE) return false;
+  
+  struct supplemental_page_table *spt = &thread_current ()->spt;
+  void *upage = pg_round_down(addr);
+  struct page *page = spt_find_page(spt, upage);
+  if (!page) {
+    void *rsp = user ? f->rsp : thread_current()->rsp;
+    if (rsp - 8 <= addr && addr <= USER_STACK) {
+      bool success = vm_alloc_page_with_initializer(VM_ANON | VM_MARKER_0, upage, true, NULL, NULL);
+      if (success) page = spt_find_page(spt, upage);
+    }
+  }
+  if (!page) return false;
+  if (write && !page->writable) return false;
+  return vm_do_claim_page (page);
+}
+```
+
+또 질문:
+- Q: 페이지 폴트가 정상적인지 여부는 어떻게 판단하는거지??
+  A: 설명해야할 내용이 길어서 아래에 정리했습니다.
+	- 일단은 `not_present`가 아니면 이미 매핑이 되어있는 페이지에 대해서 페이지 폴트가 났다는 의미이고 이건 접근 권한이 없는 페이지에 접근했다는 뜻이다. 즉, `return false`.
+	- 핀토스에서는 커널에 지연 적재 방식을 적용하지 않기 때문에 커널의 모든 부분은 이미 매핑이 된 상태일 것이고, 커널 스택 또한 사용자 스택과 다르게 확장이 불가능한 형태이기 때문에 `vm_try_handle_fault` 함수 자체가 애초에 사용자 프로그램의 지연 적재 / 스택 확장만 처리하는 함수이다. 따라서 접근하려는 가상 주소가 유효한 사용자 가상 주소 범위가 아니라면 잘못된 접근이라는 뜻이다. 즉, `return false`.
+	- 마지막으로 쓰기가 허용되지 않은 페이지에 쓰기를 시도하는 경우에도 잘못된 접근이다. 즉, `return false`.
+- Q: 왜 `if (rsp - 8 <= addr && addr <= USER_STACK)`이 조건문에서 `rsp`가 아니라 `rsp - 8`까지의 주소도 허용하는 거지??
+  A: 아마 어셈블리 수준에서 생각하면 `push` 명령어 한 번에 `rsp`를 8바이트만큼 내리기 때문에 `rsp`바로 아래 8바이트까지는 유효한 스택 확장으로 판단하는 것 같다. (휴리스틱)
+- Q: `rsp` ~ `USER_STACK`의 주소 범위는 이미 생성된 스택이고 이 범위의 페이지들은 이미 `spt`에 등록이 되어있기 때문에 `rsp - 8` ~ `rsp` 범위만 체크하면 되는 것 아닌가?? 왜 `rsp - 8` ~ `USER_STACK`까지 확인하는 거지??
+  A: 완벽히 이해는 안되지만 `rsp`를 한 번에 크게 내리는 경우에는 스택을 높은 주소에서 아래로 차곡차곡 쌓는 방식이 아니라, 스택의 중간 부분들이 비어있는 형태로도 스택 생성이 이뤄질 수도 있다고 한다..
