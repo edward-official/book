@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 343.5024719238281
+    "width": 343.5024719238281,
+    "collapsed": true
   },
   "right": {
     "id": "6745f7ed0306601a",
@@ -156,7 +157,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 377.5
+    "width": 377.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,20 +173,19 @@
   },
   "active": "7c5e6957f7826e5b",
   "lastOpenFiles": [
+    "pintos/Project03-VirtualMemory/Phase00-VirtualMemory.md",
+    "pintos/Project03-VirtualMemory/Phase01-MemoryManagement.md",
+    "pintos/Project03-VirtualMemory/Phase02-AnonymousPage.md",
     "tmp.png",
     "Screenshot 2025-12-03 at 11.45.15.png",
     "pintos/Project03-VirtualMemory/images/vm_anon_init.png",
-    "pintos/Project03-VirtualMemory/Phase02-AnonymousPage.md",
     "pintos/Project03-VirtualMemory/images/Bogus.png",
     "pintos/Project03-VirtualMemory/images/UninitializedPage.png",
     "pintos/Project03-VirtualMemory/images/LoadSegment.png",
     "pintos/Project03-VirtualMemory/images/Page.png",
-    "pintos/Project03-VirtualMemory/Phase01-MemoryManagement.md",
     "pintos/Project03-VirtualMemory/images/InsertPage.png",
     "pintos/Project03-VirtualMemory/images/FindElement.png",
     "pintos/Project03-VirtualMemory/images/OutdatedFind.png",
-    "pintos/Project03-VirtualMemory/images/HashFind.png",
-    "pintos/Project03-VirtualMemory/Phase00-VirtualMemory.md",
     "pintos/Project03-VirtualMemory/images",
     "pintos/Project02-UserProgram/other/ExtendFileDescriptor.md",
     "pintos/Project03-VirtualMemory",

@@ -39,7 +39,7 @@ user program tries to access a page which it believes to possess a frame:
 우리는 `lazy_load_segment`, `vm_alloc_page_with_initializer`를 구현해야합니다.
 또한 우리는 전달된 `VM_TYPE`에 맞는 적절한 initializer를 찾아서 가져와야하고 그 ==initializer를 통해서 `uninit_new`를 호출==해야합니다.
 
-#### 프레임/페이지 지연 적재를 구현해봅시다
+## 프레임/페이지 지연 적재를 구현해봅시다
 지연 적재(Lazy Loading)란 내가 이해한 바로는 `spt`에만 페이지를 먼저 할당하고 실제 물리 프레임은 실제 필요한 순간(page fault)에만 할당하는 방법인 것 같다.
 또한 프레임을 할당하면 당연히 그 프레임에 데이터를 적재하는 과정도 자연스럽게 따라올 것이다.
 
@@ -196,3 +196,33 @@ vm_try_handle_fault (struct intr_frame *f, void *addr, bool user, bool write, bo
   A: 아마 어셈블리 수준에서 생각하면 `push` 명령어 한 번에 `rsp`를 8바이트만큼 내리기 때문에 `rsp`바로 아래 8바이트까지는 유효한 스택 확장으로 판단하는 것 같다. (휴리스틱)
 - Q: `rsp` ~ `USER_STACK`의 주소 범위는 이미 생성된 스택이고 이 범위의 페이지들은 이미 `spt`에 등록이 되어있기 때문에 `rsp - 8` ~ `rsp` 범위만 체크하면 되는 것 아닌가?? 왜 `rsp - 8` ~ `USER_STACK`까지 확인하는 거지??
   A: 완벽히 이해는 안되지만 `rsp`를 한 번에 크게 내리는 경우에는 스택을 높은 주소에서 아래로 차곡차곡 쌓는 방식이 아니라, 스택의 중간 부분들이 비어있는 형태로도 스택 생성이 이뤄질 수도 있다고 한다..
+
+## 프로세스 복제와 삭제 동작을 구현해봅시다.
+이제는 프로세스의 복제와 삭제를 지원하기 위해서 supplemental page table interface를 다시 수정해야합니다.
+
+#### `supplemental_page_table_copy`
+이 함수는 `src`의 `spt`를 `dst`로 복제하는 역할을 하며 자식이 부모의 실행 컨텍스트를 상속받을 때 사용된다.
+부모 `spt`의 `page`들을 순회하면서 `dst`의 `spt`에 완전한 `page` 복사본을 만들어야한다.
+
+이 함수는 `__do_fork`에서 호출이 된다.
+즉 자식 프로세스와 그 프로세스의 `spt`는 이미 생성이 되어있다고 가정하는 것.
+그러면 `spt`(`h_table`)를 순회하면서 `struct page`와 `struct uninit_page`의 `aux`를 복제하는 것이 이 함수의 목표.
+추가로 프레임 할당이 필요한 경우에는 프레임 할당까지 수행하는 것도 수행하기.
+
+- Q: `file_open`과 `file_reopen`은 뭐가 다른거지??
+- A: `file_reopen`은 같은 `inode` 객체를 참조하는 새로운 `struct file`을 만들고 그 포인터를 반환하는 함수
+
+- Q: `file->ref_cnt`와 `inode->open_cnt`은 뭐가 다른거지??
+- A: `inode`는 파일의 본체 역할이고 이 `inode`를 참조하는 `file`의 수가 `inode->open_cnt`이고, 하나의 `file`을 참조하는 `fd`의 수가 `file->ref_cnt`이다.
+
+- Q: 오픈 핸들이라는 말이 뭐지??
+- A: 파일 구조체를 가리키는 포인터를 뜻한다.
+
+- Q: `__do_fork`에서 호출이 되는 `supplemental_page_table_copy`가 받는 `dst` 인자는 어차피 현재 프로세스의 spt로 정해져있는데 왜 굳이 `dst` 인자가 필요한걸까
+- A: 일단 지금은 답을 못찾았고 나중에 더 많은 구현을 추가해서 복잡성이 증가하면 문제가 될 수도 있다는 생각...?
+
+#### `supplemental_page_table_kill`
+`spt`가 갖고있던 모든 자원들을 반납합니다.
+이 함수는 `process_exit` 함수에 의해서 호출됩니다.
+우리는 `spt`의 `page`들을 순회하면서 각각의 `page`에 대해서 `destroy` 함수를 호출해야합니다.
+이 함수의 호출자가 `pml4`와 `palloc`된 메모리에 대해서는 처리해주기 때문에 이 함수에서는 이 부분들을 신경쓰지 않아도 된다.
